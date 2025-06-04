@@ -1,0 +1,69 @@
+/* Fondo general */
+body {
+  background-color: #c4c2c2; /* Fondo oscuro general */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor de la calculadora */
+.calculator {
+  background-color: #000000; /* Negro profundo */
+  border-radius: 20px;        /* Bordes redondeados */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Pantalla donde vemos nuestros resultados */
+#pantalla {
+  min-height: 60px;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  overflow-x: auto; /* Permite desplazamiento si el número es largo */
+}
+
+/* Estilo general de botones */
+button {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+}
+
+/* Botones grises (operaciones auxiliares) */
+.btn-light {
+  background-color: #f1f1f1;
+  color: rgb(1, 3, 58);
+}
+
+/* Botones oscuros (números) */
+.btn-secondary {
+  background-color: #333;
+  color: white;
+}
+
+/* Botones naranjas (operaciones principales) */
+.btn-warning {
+  background-color: #c97e04;
+  color: white;
+}
+
+/* Botón igual (=) especial */
+.btn-equal {
+  background-color: #f69906;
+  color: white;
+  height: 70px;
+  font-size: 16px;
+}
+
+.btn-zero {
+  grid-column: span 3;
+}
+
+/* Efecto al presionar */
+button:active {
+  opacity: 0.85;
+  transform: scale(0.98);
+}

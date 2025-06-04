@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colaborativo Calculadora</title>
+
+  <!-- Enlace a Bootstrap local -->
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-white d-flex justify-content-center align-items-center vh-100">
+  <!-- El body está centrado vertical y horizontalmente (vh-100 = altura 100%) -->
+   
+
+  <div> 
+    <!-- Imagen superior centrada -->
+    <div class="text-center">
+      <img src="img/LOGOESPE.png" alt="Logo Calculadora" class="img-fluid" style="max-height: 120px;">
+    </div>
+
+    <!-- Contenedor principal de la calculadora -->
+    <div class="calculator bg-black p-4 rounded shadow" style="width: 320px;">
+      <!-- Fondo negro, padding 4, bordes redondeados, sombra -->
+
+      <!-- Pantalla de la calculadora -->
+      <div id="pantalla" class="text-end fs-1 text-white mb-3">0</div>
+      <!-- text-end = alinea a la derecha, fs-1 = fuente grande, mb-3 = margen abajo -->
+
+      <!-- cada Fila de botones: AC, +/- , %, ÷ -->
+      <div class="row g-2">
+        <div class="col-3"><button class="btn btn-light w-100 btn-lg">C</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 btn-lg">+/-</button></div>
+        <div class="col-3"><button class="btn btn-light w-100 btn-lg">%</button></div>
+        <div class="col-3"><button class="btn btn-warning w-100 btn-lg">÷</button></div>
+      </div>
+
+      <!-- Fila de botones: 7, 8, 9, × -->
+      <div class="row g-2 mt-2">
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">7</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">8</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">9</button></div>
+        <div class="col-3"><button class="btn btn-warning w-100 btn-lg">×</button></div>
+      </div>
+
+      <!-- Fila de botones: 4, 5, 6, − -->
+      <div class="row g-2 mt-2">
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">4</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">5</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">6</button></div>
+        <div class="col-3"><button class="btn btn-warning w-100 btn-lg">−</button></div>
+      </div>
+
+      <!-- Fila de botones: 1, 2, 3, + -->
+      <div class="row g-2 mt-2">
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">1</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">2</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">3</button></div>
+        <div class="col-3"><button class="btn btn-warning w-100 btn-lg">+</button></div>
+      </div>
+
+      <!-- Fila de botones: 0 (ocupa dos columnas), punto, igual -->
+      <div class="row g-2 mt-2">
+        <div class="col-6"><button class="btn btn-secondary w-100 btn-lg">0</button></div>
+        <div class="col-3"><button class="btn btn-secondary w-100 btn-lg">,</button></div>
+        <div class="col-3"><button class="btn btn-success w-100 btn-lg">=</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script JavaScript para poder colocar la lógica de las funciones de nuestra calculadora -->
+  <script src="js/funciones.js"></script>
+
+  <!-- Bootstrap JS local (opcional si necesitas funcionalidades como tooltips, modales, etc.) -->
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
