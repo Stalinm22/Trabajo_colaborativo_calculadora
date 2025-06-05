@@ -24,13 +24,11 @@ function calcularResultado() {
       .replace(/,/g, '.'); // Reemplazar coma por punto para decimales para evitar errors al poner punto o coma
 
     const resultado = eval(expresion);
-
-if (!isFinite(resultado) || isNaN(resultado)) {
-  pantalla.textContent = 'Error';
-} else {
-  pantalla.textContent = resultado;
-  nuevaOperacion = true;
-}
+    pantalla.textContent = resultado;
+    nuevaOperacion = true;
+  } catch {
+    pantalla.textContent = 'Error';
+  }
 }
 
 // creamos la función para limpiar la pantalla
