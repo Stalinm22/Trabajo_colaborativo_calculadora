@@ -1,11 +1,11 @@
-// Selección de la pantalla
+// Selección de la pantalla por id y obtenemos el elemento 
 const pantalla = document.getElementById('pantalla');
 
-// Variables para operaciones
+// Variables para las operaciones
 let operacion = '';
 let nuevaOperacion = false;
 
-// Función para actualizar la pantalla
+// Función para actualizar la pantalla de nuetro trabajo 
 function actualizarPantalla(valor) {
   if (pantalla.textContent === '0' || nuevaOperacion) {
     pantalla.textContent = valor;
@@ -15,13 +15,13 @@ function actualizarPantalla(valor) {
   }
 }
 
-// Función para calcular el resultado
+// Función de js para calcular el resultado
 function calcularResultado() {
   try {
     const expresion = pantalla.textContent
       .replace(/×/g, '*')
       .replace(/÷/g, '/')
-      .replace(/,/g, '.'); // Reemplazar coma por punto para decimales
+      .replace(/,/g, '.'); // Reemplazar coma por punto para decimales para evitar errors al poner punto o coma
 
     const resultado = eval(expresion);
     pantalla.textContent = resultado;
@@ -31,14 +31,14 @@ function calcularResultado() {
   }
 }
 
-// Función para limpiar la pantalla
+// creamos la función para limpiar la pantalla
 function limpiarPantalla() {
   pantalla.textContent = '0';
   operacion = '';
   nuevaOperacion = false;
 }
 
-// Función para cambiar el signo
+// Función para cambiar el signo de +/-
 function cambiarSigno() {
   let valor = pantalla.textContent;
   if (valor !== '0') {
@@ -50,13 +50,13 @@ function cambiarSigno() {
   }
 }
 
-// Función para calcular el porcentaje
+// Función para calcular el porcentaje %
 function calcularPorcentaje() {
   pantalla.textContent = parseFloat(pantalla.textContent) / 100;
   nuevaOperacion = true;
 }
 
-// Escuchamos todos los botones
+// Escuchamos todos los botones a lo que el usuario precione los diferentes numeros
 document.querySelectorAll('button').forEach(boton => {
   boton.addEventListener('click', () => {
     const valor = boton.textContent;
