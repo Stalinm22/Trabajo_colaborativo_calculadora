@@ -3,7 +3,18 @@ body {
   background-color: #c4c2c2; /* Fondo oscuro general */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/* Formato del div de nuestros nombres */
+.centrado {
+    width: 20%;
+    margin: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #333;
+}
 /* Contenedor de la calculadora */
 .calculator {
   background-color: #000000; /* Negro profundo */
